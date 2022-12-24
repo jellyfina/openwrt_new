@@ -1,6 +1,6 @@
 #!/bin/bash
-# https://github.com/shidahuilang/openwrt
-# common Module by dahuilang
+# https://github.com/jellyfina/openwrt_new
+# common Module by jellyfina
 # matrix.target=${FOLDER_NAME}
 
 function TIME() {
@@ -21,7 +21,6 @@ Compte=$(date +%Y年%m月%d号%H时%M分)
       }
     }
 }
-
 
 function settings_variable() {
 if [[ -n "${INPUTS_REPO_BRANCH}" ]]; then

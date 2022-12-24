@@ -5,9 +5,8 @@
 - 账户：`root`   密码：`空`
  
  ##### 固件更新下载:
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/shidahuilang/openwrt?style=for-the-badge&label=固件更新下载)](https://github.com/shidahuilang/openwrt/releases)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/shidahuilang/openwrt?style=for-the-badge&label=固件更新下载)](https://github.com/jellyfina/openwrt_new/releases)
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/shidahuilang/ipk?style=for-the-badge&label=插件更新下载)](https://github.com/shidahuilang/ipk/releases)
 - ================================================================
 - 首先需要打开 Openwrt 主页,点击系统-TTYD 命令窗,或者使用```putty```或者```openwrt```后台luci插件在线更新 
 - 输入`openwrt`即可进入固件升级菜单                            

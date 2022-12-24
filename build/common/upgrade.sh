@@ -7,7 +7,7 @@
 function Diy_Part1() {
 	find . -type d -name 'luci-app-autoupdate' | xargs -i rm -rf {}
 	echo "正在执行：给源码增加定时更新固件插件和设置插件和ttyd成默认自选"
-	git clone -b lang https://github.com/shidahuilang/luci-app-autoupdate $HOME_PATH/package/luci-app-autoupdate
+	git clone -b lang https://github.com/jellyfina/luci-app-autoupdate $HOME_PATH/package/luci-app-autoupdate
 	if [[ `grep -c "luci-app-autoupdate" ${HOME_PATH}/include/target.mk` -eq '0' ]]; then
 		sed -i 's?DEFAULT_PACKAGES:=?DEFAULT_PACKAGES:=luci-app-autoupdate luci-app-ttyd ?g' ${HOME_PATH}/include/target.mk
 	fi
@@ -127,7 +127,7 @@ Github_Release="${Github_Release}"
 Release_download1="${Release_download1}"
 Release_download2="${Release_download2}"
 EOF
-	bash <(curl -fsSL https://raw.githubusercontent.com/shidahuilang/common/main/autoupdate/replacebianliang.sh)
+	bash <(curl -fsSL https://raw.githubusercontent.com/jellyfina/openwrt_new/main/build/common/autoupdate/replacebianliang.sh)
 	sudo chmod +x ${In_Firmware_Replace}
 }
 

@@ -1,4 +1,4 @@
-## `IPV6大全版  6.0 内核带DOCKER`
+## `IPV6大全版 6.0 内核带DOCKER`
 #### 🚩 源码拉取`coolsnowwolf` `Lienol` `immortalwrt` `x-wrt` `openwrt` 自行选择编译
 - 编译库`X86适配OTA自动升级
 - 默认IP地址：`192.168.2.1`

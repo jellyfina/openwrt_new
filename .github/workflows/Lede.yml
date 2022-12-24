@@ -120,6 +120,7 @@ jobs:
 
     - name: 读取脚本设置
       run: |
+        cd ${GITHUB_WORKSPACE}
         mv -f build/common/*.sh build/${{ env.FOLDER_NAME }}/
         chmod -R +x build
         export SOURCE_CODE="$(source "build/${{ matrix.target }}/settings.ini" && echo ${SOURCE_CODE})"

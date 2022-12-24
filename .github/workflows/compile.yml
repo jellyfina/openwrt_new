@@ -44,7 +44,6 @@ jobs:
     - name: 读取脚本
       run: |
         cd ${GITHUB_WORKSPACE}
-        git clone https://github.com/shidahuilang/common build/common
         mv -f build/common/*.sh build/${{matrix.target}}/
         sudo chmod -R +x build
         if [[ -n "${{ github.event.workflow }}" ]]; then

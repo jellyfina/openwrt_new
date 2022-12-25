@@ -40,8 +40,9 @@ if [[ -n "${INPUTS_REPO_BRANCH}" ]]; then
     INFORMATION_NOTICE2="INFORMATION_NOTICE\\=\\\"TG\\\""
   elif [[ "${INPUTS_INFORMATION_NOTICE}" == 'pushplus' ]]; then
     INFORMATION_NOTICE2="INFORMATION_NOTICE\\=\\\"PUSH\\\""
-  fi
-        
+  elif [[ "${INPUTS_INFORMATION_NOTICE}" == 'Wechat' ]]; then
+    INFORMATION_NOTICE2="INFORMATION_NOTICE\\=\\\"WECH\\\""
+  fi      
 
   if [[ `echo "${INPUTS_CPU_SELECTION}" |grep -Eoc 'E5'` -eq '1' ]] || [[ `echo "${INPUTS_CPU_SELECTION}" |grep -Eoc 'e5'` -eq '1' ]]; then
     export INPUTS_CPU_SELECTION="E5"
@@ -93,7 +94,7 @@ if [[ -n "${INPUTS_REPO_BRANCH}" ]]; then
   fi
   sed -i "s?${COLLECTED_PACKAGES1}?${COLLECTED_PACKAGES2}?g" "${ymlsettings}"
   sed -i "s?${CPU_SELECTION1}?${CPU_SELECTION2}?g" "${ymlsettings}"
-  sed -i "s?${INFORMATION_NOTICE1}?${INFORMATION_NOTICE2}?g" "${ymlsettings}"
+  sed -i "s?${INFORMATION_NOTICE1}?${INFORMATION_NOTICE2}?${INFORMATION_NOTICE3}?g" "${ymlsettings}"
   export t1=`date -d "$(date +'%Y-%m-%d %H:%M:%S')" +%s`
   echo "t1=${t1}" >> ${GITHUB_ENV}
   mv "${ymlsettings}" build/${FOLDER_NAME}/relevance/${t1}.ini

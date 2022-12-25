@@ -1925,10 +1925,10 @@ else
 fi
 echo
 echo
-if [[ ${INFORMATION_NOTICE} == "TG" ]] || [[ ${INFORMATION_NOTICE} == "PUSH" ]]; then
-  TIME y "pushplus/Telegram通知: 开启"
+if [[ ${INFORMATION_NOTICE} == "TG" ]] || [[ ${INFORMATION_NOTICE} == "PUSH" ]] || [[ ${INFORMATION_NOTICE} == "Wechat" ]]; ; then
+  TIME y "pushplus/Telegram/Wechat通知: 开启"
 else
-  TIME r "pushplus/Telegram通知: 关闭"
+  TIME r "pushplus/Telegram/Wechat通知: 关闭"
 fi
 if [[ ${UPLOAD_FIRMWARE} == "true" ]]; then
   TIME y "上传固件在github actions: 开启"

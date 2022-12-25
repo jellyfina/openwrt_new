@@ -223,3 +223,4 @@ CONFIG_shadow-all=y
 CONFIG_PACKAGE_kmod-crypto-kpp=y
 CONFIG_PACKAGE_kmod-shortcut-fe=y
 CONFIG_PACKAGE_kmod-shortcut-fe-cm=y
+CONFIG_PACKAGE_libnatpmp=y

@@ -41,7 +41,7 @@ if [[ -n "${INPUTS_REPO_BRANCH}" ]]; then
   elif [[ "${INPUTS_INFORMATION_NOTICE}" == 'pushplus' ]]; then
     INFORMATION_NOTICE2="INFORMATION_NOTICE\\=\\\"PUSH\\\""
   elif [[ "${INPUTS_INFORMATION_NOTICE}" == 'Wechat' ]]; then
-    INFORMATION_NOTICE3="INFORMATION_NOTICE\\=\\\"WECH\\\""
+    INFORMATION_NOTICE2="INFORMATION_NOTICE\\=\\\"WECH\\\""
   fi      
 
   if [[ `echo "${INPUTS_CPU_SELECTION}" |grep -Eoc 'E5'` -eq '1' ]] || [[ `echo "${INPUTS_CPU_SELECTION}" |grep -Eoc 'e5'` -eq '1' ]]; then

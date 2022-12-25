@@ -94,7 +94,7 @@ if [[ -n "${INPUTS_REPO_BRANCH}" ]]; then
   fi
   sed -i "s?${COLLECTED_PACKAGES1}?${COLLECTED_PACKAGES2}?g" "${ymlsettings}"
   sed -i "s?${CPU_SELECTION1}?${CPU_SELECTION2}?g" "${ymlsettings}"
-  sed -i "s?${INFORMATION_NOTICE1}?${INFORMATION_NOTICE2}?${INFORMATION_NOTICE3}?g" "${ymlsettings}"
+  sed -i "s?${INFORMATION_NOTICE1}?${INFORMATION_NOTICE2}?g" "${ymlsettings}"
   export t1=`date -d "$(date +'%Y-%m-%d %H:%M:%S')" +%s`
   echo "t1=${t1}" >> ${GITHUB_ENV}
   mv "${ymlsettings}" build/${FOLDER_NAME}/relevance/${t1}.ini

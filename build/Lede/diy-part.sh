@@ -50,6 +50,9 @@ export Cancel_running="1"                    # 取消路由器每天跑分任务
 # 添加edge主题
 git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 
+# 删anrog主题设置插件
+rm -rf ./feeds/dahuilang/luci-app-argon-config
+
 # 修改插件名字
 sed -i 's/"aMule设置"/"电驴下载"/g' `egrep "aMule设置" -rl ./`
 sed -i 's/"网络存储"/"NAS"/g' `egrep "网络存储" -rl ./`

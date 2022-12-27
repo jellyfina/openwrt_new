@@ -40,6 +40,28 @@ ${White}q. 退出
 		rm -rf ${Tools_Cache}/*
 		exit 0
 	;;
+	+.)
+		[ -s ${AutoUpdate_File} ] && {
+			AutoUpdate_UI
+		} || {
+			ECHO r "\n未检测到 '/bin/AutoUpdate.sh',请确保当前固件支持一键更新!"
+			sleep 2
+		}
+	;;
+	+,)
+		wget -q ${Github_Raw}/Scripts/AutoBuild_Tools.sh -O ${Tools_Cache}/AutoBuild_Tools.sh
+		if [[ $? == 0 && -s ${Tools_Cache}/AutoBuild_Tools.sh ]];then
+			ECHO y "\n[AutoBuild_Tools] 脚本更新成功!"
+			rm -f ${Tools_File}
+			mv -f ${Tools_Cache}/AutoBuild_Tools.sh ${Tools_File}
+			chmod +x ${Tools_File}
+			sleep 2
+			exec ${Tools_File}
+		else
+			ECHO r "\n[AutoBuild_Tools] 脚本更新失败!"
+			sleep 2
+		fi
+	;;
 	1)
 		[[ ! $(CHECK_PKG block) == true ]] && {
 			ECHO r "\n缺少相应依赖包,请先安装 [block-mount] !"

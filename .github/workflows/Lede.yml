@@ -49,17 +49,17 @@ on:
       UPLOAD_FIRMWARE:
         description: '上传固件到 Github Artifacts'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
       UPLOAD_RELEASE:
         description: '上传固件到 Github Releases'
-        required: true
-        default: 'false'
+        required: false
+        default: 'true'
         type: boolean
       CACHEWRTBUILD_SWITCH:
         description: '缓存加速编译'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
       UPDATE_FIRMWARE_ONLINE:
         description: '增加在线更新固件功能'

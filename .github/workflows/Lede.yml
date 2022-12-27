@@ -53,7 +53,7 @@ on:
         type: boolean
       UPLOAD_RELEASE:
         description: '上传固件到 Github Releases'
-        required: false
+        required: true
         default: 'false'
         type: boolean
       CACHEWRTBUILD_SWITCH:

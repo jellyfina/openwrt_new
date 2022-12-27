@@ -344,7 +344,7 @@ TIME y "拉取插件应该单独拉取某一个你需要的插件，别一下子
 if [[ "${UPDATE_FIRMWARE_ONLINE}" == "true" ]]; then
   TIME r "SSH连接固件输入命令'openwrt'可进行修改后台IP、清空密码、还原出厂设置和在线更新固件操作"
   TIME r "SSH连接固件输入命令'tools'可固件工具箱"
-  TIME r "SSH连接固件输入命令'qinglong'可一键安装青龙和Maiark"
+  TIME r "SSH连接固件输入命令'qinglong'可安装青龙面板"
 fi
 TIME r ""
 TIME r ""

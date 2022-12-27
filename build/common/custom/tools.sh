@@ -31,8 +31,7 @@ ${Grey}AutoBuild 固件工具箱 ${Version}${White} [$$] [${Tools_File}]
 4. 硬盘信息
 5. 网络检查
 
-${Grey}u. 固件更新
-${Yellow}x. 更新脚本
+
 ${White}q. 退出
 "
 	read -p "请从上方选项中选择一个操作:" Choose
@@ -40,28 +39,6 @@ ${White}q. 退出
 	q)
 		rm -rf ${Tools_Cache}/*
 		exit 0
-	;;
-	u)
-		[ -s ${AutoUpdate_File} ] && {
-			AutoUpdate_UI
-		} || {
-			ECHO r "\n未检测到 '/bin/AutoUpdate.sh',请确保当前固件支持一键更新!"
-			sleep 2
-		}
-	;;
-	x)
-		wget -q ${Github_Raw}/Scripts/AutoBuild_Tools.sh -O ${Tools_Cache}/AutoBuild_Tools.sh
-		if [[ $? == 0 && -s ${Tools_Cache}/AutoBuild_Tools.sh ]];then
-			ECHO y "\n[AutoBuild_Tools] 脚本更新成功!"
-			rm -f ${Tools_File}
-			mv -f ${Tools_Cache}/AutoBuild_Tools.sh ${Tools_File}
-			chmod +x ${Tools_File}
-			sleep 2
-			exec ${Tools_File}
-		else
-			ECHO r "\n[AutoBuild_Tools] 脚本更新失败!"
-			sleep 2
-		fi
 	;;
 	1)
 		[[ ! $(CHECK_PKG block) == true ]] && {

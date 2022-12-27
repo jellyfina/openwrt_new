@@ -23,7 +23,7 @@ do
 	clear
 	echo -e "$(cat /etc/banner)"
 	echo -e "
-${Grey}AutoBuild 固件工具箱 ${Version}${White} [$$] [${Tools_File}]
+${Grey}AutoBuild 固件工具箱 ${Version}
 
 1. USB 空间扩展			6. 环境修复
 2. Samba 设置			7. 系统信息监控

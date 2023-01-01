@@ -55,7 +55,7 @@ rm -rf ./feeds/dahuilang/luci-app-argon-config
 
 # 修改插件名字
 sed -i 's/"aMule设置"/"电驴下载"/g' `egrep "aMule设置" -rl ./`
-sed -i 's/"网络存储"/"NAS"/g' `egrep "网络存储" -rl ./`
+sed -i 's/"网络存储"/"存储"/g' `egrep "网络存储" -rl ./`
 sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' `egrep "Turbo ACC 网络加速" -rl ./`
 sed -i 's/"实时流量监测"/"流量"/g' `egrep "实时流量监测" -rl ./`
 sed -i 's/"KMS 服务器"/"KMS激活"/g' `egrep "KMS 服务器" -rl ./`

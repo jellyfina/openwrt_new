@@ -23,7 +23,7 @@ do
 	clear
 	echo -e "$(cat /etc/banner)"
 	echo -e "
-${Grey}AutoBuild 固件工具箱 ${Version}
+${Grey}AutoBuild 固件工具箱 ${Version}${White} [$$] [${Tools_File}]
 
 1. USB 空间扩展			6. 环境修复
 2. Samba 设置			7. 系统信息监控
@@ -31,7 +31,8 @@ ${Grey}AutoBuild 固件工具箱 ${Version}
 4. 硬盘信息
 5. 网络检查
 
-
+${Grey}u. 固件更新
+${Yellow}x. 更新脚本
 ${White}q. 退出
 "
 	read -p "请从上方选项中选择一个操作:" Choose
